@@ -1,0 +1,38 @@
+[project]
+name = "chid"
+version = "0.1.0"
+authors = [
+    {name = "Martin Olivesten", email = "mbao02@pm.me"}
+]
+description = "chid - change git identity"
+readme = "README.md"
+requires-python = ">=3.10"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only"
+]
+
+dependencies = [
+    "colorama"
+]
+
+[project.scripts]
+chid = "chid.__main__:bootstrap"
+
+
+[tool.setuptools]
+packages = [
+    "chid",
+]
+
+
+
+[tool.flake8]
+# use pflake8 to use this config
+extend-ignore = [
+    "E203",
+    "E701",
+    "E704",
+    "E741",
+]
