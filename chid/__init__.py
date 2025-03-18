@@ -160,8 +160,8 @@ __commands: Dict[Commands, Callable[[], None | int]] = {
 def main(command: Commands, *args: str):
     if not check_managed():
         print_err("Not managed!")
-        i = input("Run setup? [Y/n] ")
         while True:
+            i = input("Run setup? [Y/n] ")
             if i in ('', 'y', 'Y'):
                 return setup()
             elif i in('n', 'N'):
